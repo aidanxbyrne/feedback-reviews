@@ -3,7 +3,7 @@ import Card from "./shared/Card";
 import Button from "./shared/Button";
 import RatingSelect from "./RatingSelect";
 
-function FeedbackForm() {
+function FeedbackForm({ onSubmit }) {
   const [text, setText] = useState("");
   const [rating, setRating] = useState(10);
   const [btnDisabled, setBtnDisabled] = useState(true);
@@ -23,9 +23,23 @@ function FeedbackForm() {
     setText(e.target.value);
   };
 
+  //On Form Submit. Diable default event. Append Rating and message to feedback state
+  const createNewItem = (e) => {
+    e.preventDefault();
+    if (text.trim().length > 10) {
+      const newFeedback = {
+        rating,
+        text,
+      };
+      onSubmit(newFeedback);
+      //Cleanup
+      setText("");
+    }
+  };
+
   return (
     <Card>
-      <form>
+      <form onSubmit={createNewItem}>
         <h2>Rate Our Service</h2>
         <RatingSelect select={(rating) => setRating(rating)} />
         <div className="input-group">
