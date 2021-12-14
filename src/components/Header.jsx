@@ -6,14 +6,14 @@ function Header({ text }) {
   return (
     <header style={{ backgroundColor: "rgba(0,0,0,0.4)" }}>
       <div className="container nav-items">
-        <Link to="/feedback-reviews-react">
+        <Link to="/">
           <h2>{text}</h2>
         </Link>
         <div className="nav-links">
-          <NavLink to="/feedback-reviews-react" activeclassname="active">
+          <NavLink to="/" activeclassname="active">
             Home
           </NavLink>
-          <NavLink to="/feedback-reviews-react/about" activeclassname="active">
+          <NavLink to="/about" activeclassname="active">
             About
           </NavLink>
         </div>
