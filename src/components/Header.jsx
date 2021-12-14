@@ -1,11 +1,22 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
 function Header({ text }) {
   return (
     <header style={{ backgroundColor: "rgba(0,0,0,0.4)" }}>
-      <div className="container">
-        <h2>{text}</h2>
+      <div className="container nav-items">
+        <Link to="/">
+          <h2>{text}</h2>
+        </Link>
+        <div className="nav-links">
+          <NavLink to="/" activeClassName="active">
+            Home
+          </NavLink>
+          <NavLink to="/about" activeClassName="active">
+            About
+          </NavLink>
+        </div>
       </div>
     </header>
   );

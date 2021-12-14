@@ -17,6 +17,11 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .container {
   max-width: 768px;
   margin: auto;
@@ -30,6 +35,26 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+}
+
+.nav-items {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #ff6a95;
+}
+
+.active {
+  color: #ff6a95;
 }
 
 .card {
