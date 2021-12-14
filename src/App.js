@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route
             exact
-            path="/"
+            path="/feedback-reviews-react"
             element={
               <>
                 <div className="container">
@@ -26,7 +26,7 @@ function App() {
               </>
             }
           />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/feedback-reviews-react/about" element={<AboutPage />} />
         </Routes>
       </Router>
     </FeedbackProvider>
