@@ -143,6 +143,10 @@ input:focus {
   outline: none;
 }
 
+.input-text-field {
+  padding-right: 10px;
+}
+
 .feedback-stats {
   color: #fff;
   display: flex;

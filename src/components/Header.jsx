@@ -10,10 +10,10 @@ function Header({ text }) {
           <h2>{text}</h2>
         </Link>
         <div className="nav-links">
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" activeclassname="active">
             Home
           </NavLink>
-          <NavLink to="/about" activeClassName="active">
+          <NavLink to="/about" activeclassname="active">
             About
           </NavLink>
         </div>
